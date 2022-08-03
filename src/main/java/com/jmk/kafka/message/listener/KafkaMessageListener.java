@@ -12,7 +12,6 @@ public class KafkaMessageListener {
 
 	private static final String ACCOUNT_SID = "AC42cf569e378c4642a1d4c1a7c441fa44";
 	private static final String AUTH_TOKEN = "d64acd48e96a0e88cd175e282ec2d09f";
-
 	@KafkaListener(topics = "topic-sms", groupId = "group-id")
 	public void listenSMS(Message smsMessage) {
 		if (smsMessage.getBody() != null && smsMessage.getToMobileNo() != null) {
